@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${pageTitle}"></title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <h1 th:text="${pageTitle}"></h1>
+    <form method="post" th:action="${givenAction}">
+        <div>
+            <input name="itemName" type="text" placeholder="itemName" th:value="${givenItemName}" />
+        </div>
+        <div>
+            <input name="itemDescription" type="text" placeholder="itemDescription" th:value="${givenItemDescription}" />
+        </div>
+        <div>
+            <input name="itemPrice" type="text" placeholder="itemPrice" th:value="${givenItemPrice}" />
+        </div>
+        <div>
+            <input name="itemQuantity" type="text" placeholder="itemQuantity" th:value="${givenItemQuantity}" />
+        </div>
+        <div>
+            <input name="itemCategory" type="text" placeholder="itemCategory" th:value="${givenItemCategory}" />
+        </div>
+        <div>
+            <button type="submit">Post</button>
+        </div>
+    </form>
+</body>
+</html>

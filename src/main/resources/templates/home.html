@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Blog</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <h1>Menu Entries</h1>
+    <div th:each="entry : *{entries}">
+        <h2 th:text="${entry.itemName}"></h2>
+        <p th:text="${entry.itemDescription}"></p>
+        <p th:text="${entry.itemPrice}"></p>
+        <p th:text="${entry.itemQuantity}"></p>
+        <p th:text="${entry.itemCategory}"></p>
+        <a th:href="@{/entry/{id}(id = ${entry.id})}">edit</a><br />
+        <a th:href="@{/entry/delete/{id}(id = ${entry.id})}">delete</a>
+    </div>
+    <div class="">
+        <a href="/entry">New Item</a>
+    </div>
+</body>
+</html>

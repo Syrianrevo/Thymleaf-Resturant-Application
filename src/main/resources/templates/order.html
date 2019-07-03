@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturant Menu</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <h1>Place an Order</h1>
+    <div th:each="entry : *{entries}">
+        <h2 th:text="${entry.itemName}"></h2>
+        <p th:text="${entry.itemDescription}"></p>
+        <p th:text="${entry.itemPrice}"></p>
+        <p th:text="${entry.itemQuantity}"></p>
+        <p th:text="${entry.itemCategory}"></p>
+       
+    </div>
+    <div class="">
+        
+    </div>
+</body>
+</html>
